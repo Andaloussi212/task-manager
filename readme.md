@@ -78,5 +78,5 @@ java model.Main
 
 ## 👨‍💻 Auteur
 
-Projet réalisé par **Andaloussi212**
+Projet réalisé par **4ndalussi**
 Étudiant en BUT Informatique
