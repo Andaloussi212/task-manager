@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         GestionnaireTaches gestionnaire = new GestionnaireTaches();
+        gestionnaire.chargerDepuisFichier();
         Scanner sc = new Scanner(System.in);
         boolean continuer = true;
         while (continuer) {
@@ -12,6 +13,7 @@ public class Main {
             System.out.println("1 - Ajouter une tâche");
             System.out.println("2 - Afficher les tâche");
             System.out.println("3 - Supprimer une tâche");
+            System.out.println("4 - Marquer une tâche comme terminée");
             System.out.println("0 - Quitter");
             System.out.println("Quel est votre choix ?");
             System.out.println("####################");
@@ -49,6 +51,14 @@ public class Main {
                     int idsuppr = sc.nextInt();
                     sc.nextLine();
                     gestionnaire.supprimerTacheParId(idsuppr);
+                    break;
+                case 4:
+                    System.out.println("");
+                    System.out.println("Quel est l'ID de la Tache à marquer comme terminée ?");
+                    System.out.println("");
+                    int idterminee = sc.nextInt();
+                    sc.nextLine();
+                    gestionnaire.marquerTacheTerminee(idterminee);
                     break;
                 case 0:
                     continuer = false;
